@@ -20,11 +20,11 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Maaf, Module Yang DiCari Tidak Valid!!**")
+            await event.edit("__Maaf, Module Yang Dicari Tidak Ditemukan!!__")
             await asyncio.sleep(20)
             await event.delete()
     else:
-        await event.edit(f"╭────────────────────\
+        await event.edit(f"╭───────────────────\
             \n│ Menu Help Geez - UserBot 🍂\
             \n├──────────────────\
             \n│ Untuk Melihat Daftar Module\
@@ -34,8 +34,8 @@ async def help(event):
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t◷ "
-        h = await event.reply(f"◖{string}◗")
+            string += "`\t⚉ "
+        h = await event.reply(f"{string}")
         await asyncio.sleep(100)
         await h.delete()
         await event.delete()
