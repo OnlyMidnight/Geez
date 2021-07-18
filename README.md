@@ -1,90 +1,59 @@
+<h1 align="center"><img src="userbot/resources/images/geez.gif" width="35px">GEEZ PROJECTS<img src="userbot/resources/images/geez.gif" width="35px"></h1>
+
 <p align="center">
-    <img alt="XBOT VERSION" src="https://img.shields.io/badge/XBOT%20VERSION-4.+-brightgreen"/>
-    <img alt="BUILD IN" src="https://img.shields.io/badge/BUILD%20-Last Day-brightgreen"/>
-           <a href="https://travis-ci.com/ximfine/XBot-Remix.svg?branch=alpha" /></a>
-    <a href="https://github.com/ximfine/XBot-Remix/network/members"> <img src="https://img.shields.io/github/forks/ximfine/XBot-Remix?logo=github&style=for-the-badge" /></a>
-           <a href="https://app.codacy.com/gh/ximfine/XBot-Remix/dashboard"> <img src="https://img.shields.io/codacy/grade/a8f0747a964e4712818a28d2a7f4edd3?color=blue&logo=codacy&style=for-the-badge" alt="Codacy" /></a>
-    <a href="https://github.com/ximfine/XBot-Remix"> <img src="https://img.shields.io/github/repo-size/ximfine/XBot-Remix?logo=github&style=for-the-badge" /></a>
-    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?label=telethon&logo=pypi&logoColor=white&style=for-the-badge" /></a>
-    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.0-blue?style=for-the-badge&logo=appveyor"/>
-   </p>
+    <a href="https://github.com/vckyou/Geez-UserBot/commits/Geez-UserBot"><img src="https://img.shields.io/github/last-commit/vckyou/Geez-UserBot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
+    <a href="https://github.com/vckyou/Geez-UserBot/actions/workflows/main.yml"><img src="https://img.shields.io/github/workflow/status/vckyou/Geez-UserBot/CI/Geez-UserBot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
+    <a href="https://travis-ci.com/vckyou/Geez-UserBot.svg?branch=Geez-UserBot" /></a>
+    <a href="https://github.com/vckyou/Geez-UserBot/issues"> <img src="https://img.shields.io/github/issues/vckyou/Geez-UserBot?color=blue&logo=github&style=for-the-badge" /></a>
+    <a href="https://github.com/vckyou/Geez-UserBot"> <img src="https://img.shields.io/github/repo-size/vckyou/Geez-UserBot?logo=github&style=for-the-badge" /></a>
+    <a href="https://github.com/vckyou/Geez-UserBot/network/members"> <img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?logo=github&style=for-the-badge" /></a>
+    <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
+    <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-white?style=for-the-badge&logo=appveyor"/>
+    <a href="https://hub.docker.com/r/vckyouuu/geezprojects"> <img src="https://img.shields.io/docker/image-size/vckyouuu/geezprojects/buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
+    <a href="https://hub.docker.com/r/vckyouuu/geezprojects/buster"> <img src="https://img.shields.io/docker/v/vckyouuu/geezprojects/buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
+    <a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+    <a href="https://t.me/VcgSupportGroup"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+    </p>
 
 
-<h3 align="center">A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.</h3>
-<p align="center">&nbsp;</p>
-
-# Based on RaphielGang's [Telegram-Paperplane](https://github.com/RaphielGang/Telegram-Paperplane)
-
-```
-/**
-    Your Telegram account may get banned.
-    I am not responsible for any improper use of this bot
-    This bot is intended for the purpose of having fun with memes,
-    as well as efficiently managing groups.
-    You ended up spamming groups, getting reported left and right,
-    and you ended up in a Finale Battle with Telegram and at the end
-    Telegram Team deleted your account?
-    And after that, then you pointed your fingers at us
-    for getting your acoount deleted?
-    I will be rolling on the floor laughing at you.
-/**
-```
-
-### ⚙️ Generate String Session
-
-•Get On Telegram With Bot [KLIK HERE](https://t.me/stringxbot) 🔥
-
-•With Repl.it [KLIK HERE](https://repl.it/@ximfine/string#main.py) 🔥
-
-### Or Run on your terminal 
-
-```
-wget https://raw.githubusercontent.com/ximfine/XBot-Remix/alpha/Getstring.sh && bash Getstring.sh
-```
-<br>
-
-## How To Deploy 👷
-
-```
-* **[HEROKU](https://www.heroku.com/) Method** 🔧
-
-  > First get API_KE & API_HASH in my.telegram.org (required)
-
-  > Get String Session on command below run in your terminal (required)
-
-  > Next click Deploy the button below. 
-
-  > Fill in the required fields on heroku
-
-  > Finally turn on the app and check the logs (settings -> view logs) enjoy :)
-```
-
-## <p align="center">💻 Deploy on Heroku 💻</p>
-
-
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/XBot-Remix/tree/alpha"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
-
-<br>
+<p align="center">
+   <a href="https://github.com/vckyou/Geez"><img src="https://telegra.ph/file/47cdc3d607b1a4f55b830.png" alt="Geez Projects" width=400px></a>
+   <br>
+   <br>
 </p>
 
-## How to setup Google Drive
-<p align="center"><a href="https://telegra.ph/How-To-Setup-Google-Drive-04-03"> <img src="https://raw.githubusercontent.com/ximfine/XBot-Remix/alpha/userbot/resources/gd.png" alt="haa" width="210" height="34.45" /></a></p>
+<h1 align="center"><img src="userbot/resources/images/GeezFire.gif" width="35px">Geez-UserBot<img src="userbot/resources/images/GeezFire.gif" width="35px"></h1>
 
-## Credits
-*   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
-*   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
-*   [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
-*   [Mr.Miss](https://github.com/keselekpermen69) - UserButt
-*   [adekmaulana](https://github.com/adekmaulana) - ProjectBish
-*   [MoveAngel](https://github.com/MoveAngel) - One4uBot
-*   [AidilAryanto](https://github.com/aidilaryanto) - ProjectDils 
-*   [Alfianandaa](https://github.com/alfianandaa/ProjectAlf) - ProjectAlf
-*   [AnggaR69s](https://github.com/GengKapak/DCLXVI) - DCLXVI
-*   [kandnub](https://github.com/kandnub) - TG-UserBot
-*   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
-*   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
-*   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
-*   AND OTHER
+**Pada Dasarnya [Geez-UserBot](https://github.com/Vckyou/Geez-UserBot) adalah userbot Telegram modular yang berjalan di Python3 dengan database sqlalchemy.
+Berbasis [Paperplane](https://github.com/RaphielGang) dan [ProjectBish](https://github.com/adekmaulana/ProjectBish) userbot. Saya membuat repository ini untuk memilih dan menambahkan beberapa modul yang saya butuhkan dengan banyak perubahan, fitur dan modul.**
 
-## License
-Licensed under [Raphielscape Public License](https://github.com/ximfine/XBot-Remix/blob/x-sql-extended/LICENSE) - Version 1.d, February 2020
+## DEPLOY TO HEROKU ⚠️
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/Geez-UserBot/tree/Geez-UserBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-indigo?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
+
+<h3 align="center">Userbot Digunakan untuk Bersenang-senang di Telegram, dan untuk Menjaga Grup Anda.</h3>
+<p align="center">&nbsp;</p>
+
+
+### Generate String Using Replit⤵️
+
+<a href="https://replit.com/@Vckyou/Geez-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
+
+
+<details>
+  <summary><b>© Credits</b></summary>
+
+
+ 🙏 **THANK YOU VERY MUCH FOR**
+
+*   [VCKYOU](https://github.com/Vckyou/Geez-Project)    Geez - Project
+*   [X_iMFiNe](https://github.com/ximfine/xBot-Remix)    XBOT-REMIX
+*   [Koala](https://github.com/ManusiaRakitan/Kampang-Bot)    Kampang - Bot
+*   [RaphielGang](https://github.com/RaphielGang)    Telegram - Paperplane
+*   [AvinashReddy3108](https://github.com/AvinashReddy3108)    PaperplaneExtended
+*   [TeamUserge](https://github.com/UsergeTeam/Userge)    Userge
+*   [sandy1709](https://github.com/sandy1709/catuserbot)    CatUserbot
+*   DAN TERIMAKASIH BANYAK KEPADA USERBOT INDONESIA LAINNYA🙏
+
+
+## Base Telethon Of 🚀
+*   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
