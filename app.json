@@ -1,7 +1,7 @@
 {
   "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
   "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "",
+  "logo": "https://telegra.ph/file/6acd55a1d78ae8bc4ddc7.png",
   "keywords": [
     "telegram",
     "userbot",
@@ -11,6 +11,7 @@
   ],
   "repository": "https://github.com/Vckyou/Geez-UserBot",
   "telegram": "https://t.me/VckyouuBitch",
+  "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/CariTemanRandom",
   "stack": "container",
   "env": {
