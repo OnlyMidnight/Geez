@@ -76,7 +76,7 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER") or "True")
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/099b2bf1c3256847946bf.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/6acd55a1d78ae8bc4ddc7.png"
 
 # Default .alive username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME") or None
@@ -177,13 +177,13 @@ TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
     "TMP_DOWNLOAD_DIRECTORY") or "./downloads"
 
 # Terminal Alias
-TERM_ALIAS = os.environ.get("TERM_ALIAS") or "XBOT-REMIX"
+TERM_ALIAS = os.environ.get("TERM_ALIAS") or "Geez-UserBot"
 
 # Genius Lyrics API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN") or None
 
 # Bot version
-BOT_VER = os.environ.get("BOT_VER", "REMIX X")
+BOT_VER = os.environ.get("BOT_VER", "Geez V5.0")
 
 CMD_HELP = {}
 
@@ -258,7 +258,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "**🔥 XBOT-REMIX 🔥\n☠️ BERHASIL DIAKTIFKAN ☠️**")
+    await bot.send_message(BOTLOG_CHATID, "__🍂 Congratsss!!!__\n**⚡Geez - UserBot Successfully Activated⚡**")
     return
 
 with bot:
@@ -273,11 +273,11 @@ with bot:
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
-    number_of_cols = 3
+    number_of_cols = 2
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("☠️", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("🍂", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -315,7 +315,7 @@ with bot:
         dugmeler = CMD_HELP
         me = bot.get_me()
         uid = me.id
-        logo = "https://telegra.ph/file/099b2bf1c3256847946bf.mp4"
+        logo = "https://telegra.ph/file/6acd55a1d78ae8bc4ddc7.png"
 
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
@@ -326,8 +326,8 @@ with bot:
                                   buttons=[
                                       [
                                           Button.url(
-                                              text="🔱 OFFICIAL CHANNELS 🔱",
-                                              url="https://t.me/X_Projectss"
+                                              text="Support Channel",
+                                              url="https://t.me/GeezProjects"
                                           )
                                       ]
                                   ]
@@ -343,7 +343,7 @@ with bot:
                 result = builder.article(
                     "Please Use Only With .help Command",
                     text="{}\nTotal loaded modules: {}".format(
-                        "[XBOT-REMIX](https://github.com/ximfine/XBot-Remix) modules helper.\n",
+                        "[Geez-UserBot](https://github.com/vckyou/Geez-UserBot) modules helper.\n",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -358,17 +358,17 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    "xbot",
+                    "geez",
                     text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/ximfine/XBot-Remix",
+                                "https://github.com/vckyou/Geez-UserBot",
                             ),
                             custom.Button.url(
                                 "Support",
-                                "https://t.me/X_Projectss"),
+                                "https://t.me/GeezProjects"),
                         ],
                     ],
                     link_preview=False,
@@ -397,7 +397,7 @@ with bot:
             if event.query.user_id == uid:  # pylint:disable=E0602
                 await event.edit("Button closed!")
             else:
-                reply_pop_up_alert = f"Silahkan Deploy XBOT-REMIX\nUntuk menggunakan bot seperti ini!"
+                reply_pop_up_alert = f"Silahkan Deploy Geez-UserBot\nUntuk menggunakan bot seperti ini!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
