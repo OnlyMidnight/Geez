@@ -492,7 +492,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "hack":
+    if input_str == "hacking":
 
         await event.edit(input_str)
 
@@ -3026,7 +3026,7 @@ CMD_HELP.update({
 \nUsage: For calling aliens 👽👽 :P\
 \n\n`.gangstar`\
 \nUsage:U becum gengstar 🤠🤠.\
-\n\n`.hack`\
+\n\n`.hacking`\
 \nUsage: For hacking telegram🖥️🖥️.\
 \n\n`.dump`\
 \nUsage: For throwing waste xD\
