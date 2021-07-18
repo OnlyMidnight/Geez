@@ -24,17 +24,17 @@ async def help(event):
             await asyncio.sleep(20)
             await event.delete()
     else:
-        await event.edit(f"**╭─────────────────────**\
+        await event.edit(f"╭────────────────────\
             \n│ Menu Help Geez - UserBot 🍂\
             \n├──────────────────\
             \n│ Untuk Melihat Daftar Module\
             \n│ Contoh: .help broadcast\
             \n│ Modules Aktif: {len(modules)}\
-            \n╰───────────────────")
+            \n╰─────────────")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t "
+            string += "`\t◷ "
         h = await event.reply(f"◖{string}◗")
         await asyncio.sleep(100)
         await h.delete()
