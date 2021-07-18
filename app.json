@@ -58,10 +58,6 @@
       "description": "Client Access Token from https://genius.com/api-clients.",
       "required": false
     },
-    "MONGO_URI": {
-      "description": "Your MongoDB Atlas URL, Get your guide from https://telegra.ph/Mongo-DB-12-24.",
-      "required": false
-    },
     "GENIUS": {
       "description": "Get this value from https://genius.com/developers., basically same as GENIUS_API_TOKEN.",
       "required": false
@@ -184,10 +180,6 @@
     "WEATHER_DEFCITY": {
       "description": "Set the default city for the userbot's weather module.",
       "value": "Tangerang",
-      "required": false
-    },
-    "WOLFRAM_ID": {
-      "description": "Get an API KEY from products.wolframalpha.com/api/",
       "required": false
     },
     "LOGSPAMMER": {
