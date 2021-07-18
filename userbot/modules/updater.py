@@ -52,8 +52,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                '`[HEROKU]: Please set up the` **HEROKU_APP_NAME** `variable'
-                ' to be able to deploy newest changes of userbot.`'
+                '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
+                ' untuk dapat deploy perubahan terbaru dari ⚡Geez-Project⚡.`'
             )
             repo.__del__()
             return
@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Invalid Heroku credentials for deploying userbot dyno.`'
+                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy Geez-Project dyno.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nUpdate Deploy XBot-Remix, Silahkan Tunggu 5-8 menit..`'
+                         '\nSedang MengUpdate ⚡Geez-ProjectBot⚡, Mohon Menunggu 5-7 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -81,28 +81,28 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         try:
             remote.push(refspec="HEAD:refs/heads/master", force=True)
         except GitCommandError as error:
-            await event.edit(f'{txt}\n`Here is the error log:\n{error}`')
+            await event.edit(f'{txt}\n`Terjadi Kesalahan Di Log:\n{error}`')
             return repo.__del__()
         build = app.builds(order_by="created_at", sort="desc")[0]
         if build.status == "failed":
             await event.edit(
-                "`Build failed!\n" "Cancelled or there were some errors...`"
+                "`Build Gagal!\n" "Dibatalkan atau ada beberapa kesalahan...`"
             )
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`Berhasil Update Deploy!\n" "Merestart XBot-Remix, silahkan tunggu...`")
+            await event.edit("`Geez-ProjectBot Berhasil Di Deploy!\n" "Restarting, Mohon Tunggu Sebentar.....`")
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#NOTE \n"
-                "XBot-Remix Berhasil Di Update✓")
+                BOTLOG_CHATID, "#BOT \n"
+                "`Geez-Project Berhasil Di Update`")
 
     else:
         await event.edit('`[HEROKU]:'
-                         '\nPlease set up` **HEROKU_API_KEY** `variable.`'
+                         '\nHarap Siapkan Variabel` **HEROKU_API_KEY** `.`'
                          )
         await asyncio.sleep(10)
         await event.delete()
@@ -115,19 +115,19 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**XBot-Remix** Berhasil Di Update✓')
+    await event.edit('**⚡Geez-Project⚡** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('`XBot-Remix Di Restart....`')
+    await event.edit('**⚡Geez-Project⚡** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Silahkan Tunggu Beberapa Detik..`')
+    await event.edit('`Mohon Menunggu Beberapa Detik.`')
     await asyncio.sleep(10)
     await event.delete()
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#NOTICE \n"
-            "XBot-Remix Berhasil Di Update✓")
-        await asyncio.sleep(10)
+            BOTLOG_CHATID, "#BOT \n"
+            "**⚡Geez-Project⚡ Telah Di Perbarui.**")
+        await asyncio.sleep(100)
         await event.delete()
 
     # Spin a new instance of bot
@@ -136,28 +136,28 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@ register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
+@register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Checking for updates, please wait....`")
+    await event.edit("`Mengecek Pembaruan, Silakan Menunggu....`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`Mohon Maaf, Pembaruan Tidak Dapat Di Lanjutkan Karna "
+        txt += "Beberapa Masalah Terjadi`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
-        await event.edit(f'{txt}\n`directory {error} is not found`')
+        await event.edit(f'{txt}\n`Directory {error} Tidak Dapat Di Temukan`')
         return repo.__del__()
     except GitCommandError as error:
-        await event.edit(f'{txt}\n`Early failure! {error}`')
+        await event.edit(f'{txt}\n`Gagal Awal! {error}`')
         return repo.__del__()
     except InvalidGitRepositoryError as error:
         if conf is None:
             return await event.edit(
-                f"`Unfortunately, the directory {error} does not seem to be a git repository."
-                "\nBut we can fix that by force updating the userbot using .update now.`"
+                f"`Sayangnya, Directory {error} Tampaknya Bukan Dari Repo."
+                "\nTapi Kita Bisa Memperbarui Paksa Userbot Menggunakan .update now.`"
             )
         repo = Repo.init()
         origin = repo.create_remote("upstream", off_repo)
@@ -188,15 +188,15 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n`🔥XBot-Remix🔥\n` sudah **versi terbaru**\n`BRANCH:`**{UPSTREAM_REPO_BRANCH}**\n')
+            f'\n⚡Geez-Project⚡ Sudah Versi Terbaru\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**UPDATE Terbaru Untuk 🔥XBot-Remix🔥 [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
+        changelog_str = f'**Pembaruan Untuk ⚡Geez-Project⚡ :\n\n💻 Pembaruan Data :**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await event.edit("`Changelog is too big, view the file to see it.`")
+            await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -208,16 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('`Command to Update\n >.update now\n >.update deploy\n\nuntuk mengupdate fitur terbaru.`')
+        return await event.respond('**Perintah Untuk Update, Sebagai Berikut.**\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update now`\n 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡Geez-Project⚡.__')
 
     if force_update:
         await event.edit(
-            '`Force-Syncing to latest stable userbot code, please wait...`')
+            '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`Proses Update XBot-Remix, ....🛠️`')
-        await event.edit('`Proses Update XBot-Remix, loading....🛠️`')
-        await event.edit('`Proses Update XBot-Remix, updating....🛠️`')
-        await event.edit('`Proses Update XBot-Remix\nSilahkan tunggu....🛠️`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....1%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....20%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....35%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Loading....77%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Updating...90%`')
+        await event.edit('` Proses Update ⚡Geez-Project, Mohon Tunggu Sebentar....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -231,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    ".update"
-    "\nUsage: Checks if the main userbot repository has any updates and shows a changelog if so."
-    "\n\n.update now"
-    "\nUsage: Update your userbot, if there are any updates in your userbot repository."
-    "\n\n.update deploy"
-    "\nUsage: Deploy your userbot at heroku, if there are any updates in your userbot repository."
+    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update`"
+    "\n• : Untuk Melihat Pembaruan Terbaru Geez-Project."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update now`"
+    "\n• : Memperbarui Geez-Project."
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.update deploy`"
+    "\n• : Memperbarui Geez-Project Dengan Cara Men-Deploy Ulang."
 })
