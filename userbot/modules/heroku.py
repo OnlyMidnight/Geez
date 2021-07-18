@@ -14,6 +14,7 @@ from userbot import (
     HEROKU_APP_NAME,
     HEROKU_API_KEY,
     BOTLOG,
+    ALIVE_NAME,
     BOTLOG_CHATID,
     CMD_HELP)
 from userbot.events import register
@@ -30,6 +31,8 @@ else:
 """
    ConfigVars setting, get current var, set var or delete var...
 """
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
 @register(outgoing=True,
