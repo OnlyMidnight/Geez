@@ -20,24 +20,23 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("**Module Salah Goblokkkk!!**")
-            await asyncio.sleep(18)
+            await event.edit("**Maaf, Module Yang DiCari Tidak Valid!!**")
+            await asyncio.sleep(20)
             await event.delete()
     else:
-        await event.edit(f"**╭━━━━━━━━━━━━━━━━━━━━━╮**\
-            \n│   Help for [🔥XBOT-REMIX🔥]\
-            \n╰━━━━━━━━━━━━━━━━━━━━━╯ \
-            \n╭━━━━━━━━━━━━━━━━━━━━━╮\
-            \n│   Untuk melihat lengkap Command\
-            \n│   Contoh: .help <nama module>\
-            \n│   Modules Aktif: {len(modules)}\
-           \n╰━━━━━━━━━━━━━━━━━━━━━╯")
+        await event.edit(f"**╭─────────────────────**\
+            \n│ Menu Help Geez - UserBot 🍂\
+            \n╰─────────────────── \
+            \n╭─────────────────────\
+            \n│ Untuk Melihat Daftar Module\
+            \n│ Contoh: .help broadcast\
+            \n│ Modules Aktif: {len(modules)}\
+           \n╰──────────────────")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`\t• "
-        h = await event.reply(f"•{string}•"
-                              "\n╾─────────────────────╼")
+            string += "`\t "
+        h = await event.reply(f"◖{string}◗")
         await asyncio.sleep(100)
         await h.delete()
         await event.delete()
