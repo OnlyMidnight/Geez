@@ -164,9 +164,7 @@ async def _(event):
 
 
 CMD_HELP.update({
-    "xphreaker":
-    "**HELP FOR XPHREAKER**\
-\n╭━━━━━━━━━━━━━━━━━━━╮\
+    "phreaker":
 \n  `.gen <bin>`\
 \n   Usage: to generate cc with bin.\
 \n\n  `.chk <cc>`\
@@ -180,6 +178,5 @@ CMD_HELP.update({
 \n\n  `.subd <domain hosts>`\
 \n   Usage: to get subdomain bug/host.\
 \n\n  `.cekhttp <domain hosts>`\
-\n   Usage: to cek respons bug/host.\
-\n╰━━━━━━━━━━━━━━━━━━━╯"
+\n   Usage: to cek respons bug/host."
 })
