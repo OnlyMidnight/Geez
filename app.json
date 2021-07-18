@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ximfine/XBot-Remix",
+  "repository": "https://github.com/vckyou/XBot-Remix",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/XBOT_SUPPORT",
   "stack": "container",
@@ -194,7 +194,7 @@
     },
     "UPSTREAM_REPO_URL": {
     "description": "set this to your Xbot-Remix fork on GitHub",
-    "value": "https://github.com/ximfine/XBot-Remix",
+    "value": "https://github.com/vckyou/XBot-Remix",
     "required": false
     },
     "USR_TOKEN_UPTOBOX": {
