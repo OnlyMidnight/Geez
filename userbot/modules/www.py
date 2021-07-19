@@ -81,7 +81,7 @@ async def _(event):
               f"`•Ping: {ping_time}\n`"
               f"`•ISP: {i_s_p}\n`"
               f"`•ISP Rating: {i_s_p_rating}\n\n`"
-              "**POWERED BY XBOT REMIX 🔥**")
+              "**POWERED BY Geez-UserBot 🔥**")
     await bot.send_file(
         event.chat_id,
         speedtest_image,
@@ -100,7 +100,7 @@ async def pingme(pong):
     await pong.edit("`Pinging....`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**PONG!! 🍭**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
+    await pong.edit(f"**PONGG!! 🍂**\n**Pinger** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration))
 
 
 @register(outgoing=True, pattern="^.pong$")
