@@ -70,7 +70,7 @@ async def killdabot(event):
     if event.fwd_from:
         return
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n" "XBOT telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku")
+        await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n" "Geez-UserBot telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku")
     await event.edit("`Geez - UserBot di matikan!.`")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
