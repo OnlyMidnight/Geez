@@ -358,7 +358,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "xbot Helper",
+                    "Geez Helper",
                     text="List of Modules",
                     buttons=[],
                     link_preview=True,
