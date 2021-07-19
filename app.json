@@ -125,6 +125,11 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
+      "value": "unknown",
+      "required": false
+    },
+    "GEEZ_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .geezalive (Isi Terserah)",
       "required": false
     },
     "ALIVE_NAME": {
