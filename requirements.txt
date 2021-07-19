@@ -10,6 +10,7 @@ covid
 cryptg
 cairosvg
 colour
+carbonnow
 deezloader
 dnspython
 emoji
