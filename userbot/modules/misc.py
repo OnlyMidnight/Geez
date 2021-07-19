@@ -71,7 +71,7 @@ async def killdabot(event):
         return
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n" "XBOT telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku")
-    await event.edit("`XBOT-REMIX di matikan!.`")
+    await event.edit("`Geez - UserBot di matikan!.`")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
     else:
@@ -80,7 +80,7 @@ async def killdabot(event):
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting XBOT-REMIX....`")
+    await event.edit("`Restarting Geez - UserBot....`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
@@ -124,7 +124,13 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "   **[[KLIK HERE]](https://github.com/ximfine/XBot-Remix)**\n     __To Use Official Repo__\n                   🔥 **XBOT-REMIX** 🔥\n ≪━━━━━━━━࿇━━━━━━━━≫\n             **Thanks for using**\n "
+        "╭‒─‒──────────‒─‒╮\n"
+        "│                   ʀᴇᴘᴏ\n"
+        "│       [⚡Geez-Project⚡](https://github.com/Vckyou/Geez-UserBot)\n"
+        "├‒─‒──────────‒─‒╯\n"
+        "│🔰 **ᴏᴡɴᴇʀ :** [Geez](t.me/VckyouuBitch)\n"
+        "╰‒─‒──────────‒─‒╯\n"
+        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/Vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE)"
     )
 
 
