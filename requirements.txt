@@ -10,7 +10,6 @@ covid
 cryptg
 cairosvg
 colour
-carbonnow
 deezloader
 dnspython
 emoji
@@ -61,6 +60,7 @@ search-engine-parser
 speedtest-cli
 sqlalchemy
 scipy
+shazamio
 TgCrypto
 telethon
 telethon-session-sqlalchemy
