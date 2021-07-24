@@ -49,6 +49,7 @@ pySmartDL
 pendulum
 psutil
 python-barcode
+pydub
 python-dotenv
 python-dateutil
 pytz
