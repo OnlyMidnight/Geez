@@ -1,14 +1,12 @@
 # SPECIALS THANKS TO TEAM ULTROID
 #
-# Ported By VICKY <@VckyouuBitch>
-#
-# Geez Projects UserBot
-# Copyright (C) 2021 GeezProjects
-#
 # This file is a part of <https://github.com/vckyou/GeezProjects/>
 # PLease read the GNU Affero General Public License in
 # <https://github.com/vckyou/GeezProjects/blob/master/LICENSE>.
 #
+# Ported By VICKY <@VckyouuBitch>
+# Geez Projects UserBot
+# Copyright (C) 2021 GeezProjects
 # JANGAN HAPUS CREDIT YA KALO MAU MENGHARGAI SESEORANG!!
 
 import emoji
@@ -27,7 +25,7 @@ def remove_emoji(string):
 
 @register(outgoing=True, pattern=r"^\.tgif(?: |$)(.*)")
 async def t2g(e):
-    eris = await e.edit("`...`")
+    eris = await e.edit("`Process...`")
     input_args = e.pattern_match.group(1) 
     if not input_args:
         input_args = "No Text was Given :(("
@@ -50,13 +48,13 @@ async def t2g(e):
                 reply_to=e.reply_to_msg_id)
         await geez.delete()
     except Exception as fn:
-        return await geez.edit(f"**ERROR** : `{fn}`")
+        return await geez.delete(f"**ERROR** : `{fn}`")
     await cleargif(done)
 
 
 async def cleargif(gif_):
     try:
-        await bot(
+        await event.client(
             functions.messages.SaveGifRequest(
                 id=get_input_document(gif_),
                 unsave=True,
